@@ -443,6 +443,10 @@ footer h6 {
         display: none;
     }
 
+        .logo{
+        width: 180px;
+    }
+
     .navbar .toggle_btn{
         display: block;
     }
