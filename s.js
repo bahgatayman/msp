@@ -31,7 +31,7 @@ navLinks.forEach(link => {
 
 
 
-const targetDate = new Date("2025-02-08T00:00:00").getTime(); 
+const targetDate = new Date("2025-02-18T00:00:00").getTime(); 
 
 
 const countdownInterval = setInterval(() => {
