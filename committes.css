@@ -1,16 +1,16 @@
 /* From Uiverse.io by IWhat1 */ 
 
-        .containercom{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            z-index: 1;
-        }
-
         h2{
             /* color: #fff; */
             font-family: "Rubik Doodle Shadow", serif;
-            color: #7FBA00;
+            color: #fff;
+            margin: 8px;
+        }
+        h3{
+            /* color: #fff; */
+            /* font-family: "Rubik Doodle Shadow", serif; */
+            color: #fff;
+            margin: 8px;
         }
         .tit{
             display: flex;
@@ -19,60 +19,76 @@
             letter-spacing: 2px;
         }
         .ccontainer {
-            width: 240px;
-            height: 294px;
-            margin: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          z-index: 1;
+          margin: 30px;
+          padding: 20px;
+          gap: 30px;
             /* color: #7FBA00; */
             /* perspective: 900px; */
           }
           
+
+
+
           .card {
-            height: 100%;
-            width: 100%;
-            background-color: aliceblue;
-            position: relative;
-            transition: transform 1200ms;
-            transform-style: preserve-3d;
-            border-radius: 1rem;
-            color: #7FBA00;
-          }
-          
-          .ccontainer:hover > .card {
-            cursor: pointer;
-            transform: rotateY(180deg) rotateZ(170deg);
-            /* color: blue; */
-          }
-          
-          .front, .back {
-            height: 100%;
-            width: 100%;
-            border-radius: 1rem;
-            position: absolute;
-            box-shadow: 0 0 20px 3px rgba(50, 50, 50, 2.5);
-            border: 1px double #fff;
-            backface-visibility: hidden;
+            padding-top: 20px;
+            width: 350px;
+            height: 250px;
+            border: 1px solid #fff;
+            border-radius: 10px;
             display: flex;
-            justify-content: center;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
-            font-weight: bold;
-            gap: 20px;
-            background-color: black;
-            color: #01A3F1; 
+            text-align: center;
+            color: #fff;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: rgba(230, 221, 221, 0.1);
+            overflow: hidden;
+            box-shadow: 4px 4px 15px rgba(233, 230, 230, 0.747);
+        }
+        
+        .card img{
+          height: 200px;
+        }
+        .card:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.3), 
+                0px 5px 10px rgba(255, 255, 255, 0.2) inset;
+        }
+        
+        /* تأثير الإضاءة عند الـ Hover */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 250%;
+            height: 250%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 50%);
+            transition: transform 0.5s ease-in-out;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        
+        .card:hover::before {
+            transform: translateX(50%) translateY(50%);
+        }
+
+        @media (max-width: 480px) {
+          .tit h2 {
+              font-size: 22px;
           }
-          
-          .ccontainer:hover .front, 
-          .ccontainer:hover .back {
-            color: #fff; 
+      
+          .card {
+              width: 300px;
+              height: 200px;
           }
-          
-          .back {
-            transform: rotateY(180deg) rotateZ(175deg);
+      
+          .card h3 {
+              font-size: 18px;
           }
-          
-          .back-heading, .front-heading {
-            font-size: 28px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: bold;
-          }
-          
+      }
