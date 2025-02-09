@@ -37,12 +37,12 @@ h1{
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .card img {
-    border-radius: 10px;
-    height: 150px;
+    /* border-radius: 10px; */
+    height: 120px;
     background-color: #fff;
     /* padding: 16px; */
     /* width: 100%; */
