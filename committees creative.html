@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative committees</title>
+    <link rel="stylesheet" href="committees-style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comitee.html">Committees</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="About.html">About</a></li>
+                <!-- <li><a href="contact.html">Contact us</a></li> -->
+            </ul>
+            <a href="#" class="action_btn">Join Us</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comitee.html">Committees</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="contact.html">Contact us</a></li> -->
+                <li><a href="#" class="action_btn">Join Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <section>
+        <div class="committees">
+            <div class="card" onclick="showPopup('popup-video')">
+                <img src="img/video editor.png" alt="video">
+                <div class="title">video Editing</div>
+            </div>
+            <div class="card" onclick="showPopup('popup-graphic')">
+                <img src="img/graphic.jpg" alt="graphic">
+                <div class="title">Graphic Design</div>
+            </div>
+            <div class="card" onclick="showPopup('popup-marketing')">
+                <img src="img/marketing.jpg" alt="marketing">
+                <div class="title">Marketing</div>
+            </div>
+        </div>
+    </section>
+
+    <div id="popup-video" class="popup" style="display: none;">
+        <div class="popup-content">
+            <div class="popup-header">
+                <img src="img/video editor.png" alt="video">
+            </div>
+            <div class="popup-body">
+                <div>We focus on mastering video editing for social media content, including creating reels,
+                    trailers, and engaging videos using Adobe Premiere Pro and After Effects.</div>
+                <div>Delegates will
+                    learn how to edit, add special effects, and optimize videos for different platforms.</div>
+                <div>allowing
+                    delegates to build their portfolios while working on creative and impactful content for
+                    social media.</div>
+            </div>
+            <div class="popup-skills">
+                <div class="skill-ball">Premiere Pro & After Effects</div>
+                <div class="skill-ball">Creating reels</div>
+                <div class="skill-ball">Motion graphics</div>
+                <div class="skill-ball">Visual storytelling</div>
+                <div class="skill-ball">Portfolio development</div>
+                <div class="skill-ball">Creativity</div>
+            </div>
+            <span class="close" onclick="closePopup('popup-video')">&times;</span>
+        </div>
+    </div>
+
+    <div id="popup-graphic" class="popup" style="display: none;">
+        <div class="popup-content">
+            <div class="popup-header">
+                <img src="img/graphic.jpg" alt="graphic">
+            </div>
+            <div class="popup-body">
+                <div>We focus on creating visually appealing designs for various media, including social media
+                    graphics, posters, and logos.</div>
+                <div>Delegates will learn how to use tools like Adobe Photoshop
+                    and Illustrator to bring ideas to life, focusing on design principles, typography, and color
+                    theory.</div>
+                <div>allowing delegates to develop a strong portfolio and gain practical experience
+                    in graphic design.</div>
+            </div>
+            <div class="popup-skills">
+                <div class="skill-ball">Graphic design principles</div>
+                <div class="skill-ball">Graphic design principles</div>
+                <div class="skill-ball">Typography</div>
+                <div class="skill-ball">Branding</div>
+                <div class="skill-ball">Creative problem-solving</div>
+            </div>
+            <span class="close" onclick="closePopup('popup-graphic')">&times;</span>
+        </div>
+    </div>
+
+    <div id="popup-marketing" class="popup" style="display: none;">
+        <div class="popup-content">
+            <div class="popup-header">
+                <img src="img/marketing.jpg" alt="marketing">
+            </div>
+            <div class="popup-body">
+                <div>We focus on developing marketing strategies and promoting products or services
+                    effectively.</div>
+                <div>Delegates will learn how to conduct market research, create marketing plans,
+                    and execute campaigns using digital marketing tools.</div>
+                <div>allowing delegates to collaborate on
+                    campaigns and analyze data to optimize results.</div>
+            </div>
+            <div class="popup-skills">
+                <div class="skill-ball">Market research</div>
+                <div class="skill-ball">Digital marketing</div>
+                <div class="skill-ball">Content creation</div>
+                <div class="skill-ball">Social media strategies</div>
+                <div class="skill-ball">Campaign management</div>
+            </div>
+            <span class="close" onclick="closePopup('popup-marketing')">&times;</span>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="subscribe">
+            <img src="img/logo.png" alt="Footer Logo">
+            <div class="sub">
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <hr>
+        <div class="con-links">
+            <div class="footer-links">
+                <a href="About.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Projects</a>
+            </div>
+            <div class="social-icons">
+                <div><p>Join Us:</p></div>
+                <a href="https://www.facebook.com/MSPCU"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/msp-cairo/posts/?feedView=all"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/mspcu2/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@mspcu?_t=ZS-8tCSbHmnbK4&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <h6>MSPCU@2025. All rights reserved</h6>
+    </footer>
+
+    <script src="comm.js"></script>
+    <script src="s.js"></script>
+</body>
+</html>

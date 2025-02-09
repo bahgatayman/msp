@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Committees</title>
+    <link rel="stylesheet" href="committees-style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comitee.html">Committees</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="About.html">About</a></li>
+                <!-- <li><a href="contact.html">Contact us</a></li> -->
+            </ul>
+            <a href="#" class="action_btn">Join Us</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comitee.html">Committees</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="contact.html">Contact us</a></li> -->
+                <li><a href="#" class="action_btn">Join Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
+    <section>
+        <div class="committees">
+            <div class="card" onclick="showPopup('popup-uiux')">
+                <img src="img/uiux.png" alt="UI/UX">
+                <div class="title">UI/UX</div>
+            </div>
+            <div class="card" onclick="showPopup('popup-backend')">
+                <img src="img/nodejs.png" alt="Back-end">
+                <div class="title">Back-end</div>
+            </div>
+            <div class="card" onclick="showPopup('popup-frontend')">
+                <img src="img/html.png" alt="Front-end">
+                <div class="title">Front-end</div>
+            </div>
+            <div class="card" onclick="showPopup('popup-mobile')">
+                <img src="img/mobile.png" alt="Mobile App">
+                <div class="title">Mobile App</div>
+            </div>
+            <div class="card" onclick="showPopup('popup-cyber')">
+                <img src="img/cyber.png" alt="Cyber Security">
+                <div class="title">Cyber Security</div>
+            </div>
+        </div>
+    </section>
+
+    <div id="popup-frontend" class="popup" style="display: none;">
+        <div class="popup-content">
+            <div class="popup-header">
+                <img src="img/html.png" alt="HTML">
+            </div>
+            <div class="popup-body">
+                <div>We focus on building the structure and functionality of websites and applications.</div>
+                <div>HTML, CSS, and JavaScript. Delegates will learn how to create interactive and dynamic content.</div>
+                <div>User experiences, ensuring the front end is efficient and visually engaging.</div>
+                <div>Focus on bringing designs to life through code and learning web development foundations.</div>
+            </div>
+            <div class="popup-skills">
+                <div class="skill-ball">Responsive Design</div>
+                <div class="skill-ball">Team Collaboration</div>
+                <div class="skill-ball">Attention to Detail</div>
+                <div class="skill-ball">Problem Solving</div>
+                <div class="skill-ball">Debugging</div>
+            </div>
+            <span class="close" onclick="closePopup('popup-frontend')">&times;</span>
+        </div>
+    </div>
+
+    <div id="popup-backend" class="popup" style="display: none;">
+        <div class="popup-content">
+            <div class="popup-header">
+                <img src="img/nodejs.png" alt="nodejs">
+            </div>
+            <div class="popup-body">
+                <div>We focus on developing the server-side functionality of websites and applications using Node.js.</div>
+                <div>Delegates will learn how to handle databases, manage APIs, and build secure, scalable systems that connect the frontend to the backend.</div>
+                <div>What makes this committee special is its focus on creating powerful systems that drive the core functionality of applications.</div>
+            </div>
+            <div class="popup-skills">
+                <div class="skill-ball">Server-side programming</div>
+                <div class="skill-ball">API development</div>
+                <div class="skill-ball">Database management</div>
+                <div class="skill-ball">Logical thinking</div>
+                <div class="skill-ball">Problem-solving</div>
+            </div>
+            <span class="close" onclick="closePopup('popup-backend')">&times;</span>
+        </div>
+    </div>
+
+    <div id="popup-uiux" class="popup" style="display: none;">
+        <div class="popup-content">
+            <div class="popup-header">
+                <img src="img/uiux.png" alt="uiux">
+            </div>
+            <div class="popup-body">
+                <div>We focus on creating user-friendly designs and seamless experiences by combining creativity with research.</div>
+                <div>Delegates will learn design principles, wireframing, and prototyping while collaborating with the Frontend and Backend committees to bring their ideas to life.</div>
+                <div>What makes this committee special is its emphasis on user-first thinking and teamwork, ensuring designs are both functional and visually appealing.</div>
+            </div>
+            <div class="popup-skills">
+                <div class="skill-ball">Design principles</div>
+                <div class="skill-ball">Wireframing</div>
+                <div class="skill-ball">Prototyping</div>
+                <div class="skill-ball">User research</div>
+                <div class="skill-ball">Creativity</div>
+            </div>
+            <span class="close" onclick="closePopup('popup-uiux')">&times;</span>
+        </div>
+    </div>
+
+    <div id="popup-cyber" class="popup" style="display: none;">
+        <div class="popup-content">
+            <div class="popup-header">
+                <img src="img/cyber.png" alt="cyber">
+            </div>
+            <div class="popup-body">
+                <div>We focus on protecting systems, networks, and data from cyber threats.</div>
+                <div>Delegates will learn how to identify vulnerabilities, implement security measures, and respond to incidents.</div>
+                <div>What makes this committee special is its practical approach to solving real-world security challenges and ensuring the safety of digital assets.</div>
+            </div>
+            <div class="popup-skills">
+                <div class="skill-ball">Threat analysis</div>
+                <div class="skill-ball">Network security</div>
+                <div class="skill-ball">Ethical hacking</div>
+                <div class="skill-ball">Problem Solving</div>
+                <div class="skill-ball">Attention to detail</div>
+            </div>
+            <span class="close" onclick="closePopup('popup-cyber')">&times;</span>
+        </div>
+    </div>
+
+    <div id="popup-mobile" class="popup" style="display: none;">
+        <div class="popup-content">
+            <div class="popup-header">
+                <img src="img/mobile.png" alt="mobile">
+            </div>
+            <div class="popup-body">
+                <div>We focus on building mobile applications using Flutter.</div>
+                <div>Delegates will learn how to create responsive, fast, and visually appealing apps that work seamlessly on both iOS and Android.</div>
+                <div>What makes this committee special is the opportunity to work with Flutter’s powerful framework to develop fully functional mobile applications from scratch.</div>
+            </div>
+            <div class="popup-skills">
+                <div class="skill-ball">Flutter development</div>
+                <div class="skill-ball">App performance optimization</div>
+                <div class="skill-ball">UI UX Integration</div>
+                <div class="skill-ball">Problem Solving</div>
+                <div class="skill-ball">Cross-platform development</div>
+            </div>
+            <span class="close" onclick="closePopup('popup-mobile')">&times;</span>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="subscribe">
+            <img src="img/logo.png" alt="Footer Logo">
+            <div class="sub">
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <hr>
+        <div class="con-links">
+            <div class="footer-links">
+                <a href="About.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Projects</a>
+            </div>
+            <div class="social-icons">
+                <div><p>Join Us:</p></div>
+                <a href="https://www.facebook.com/MSPCU"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/msp-cairo/posts/?feedView=all"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/mspcu2/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@mspcu?_t=ZS-8tCSbHmnbK4&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <h6>MSPCU@2025. All rights reserved</h6>
+    </footer>
+    <script src="comm.js"></script>
+    <script src="s.js"></script>
+</body>
+</html>
