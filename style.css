@@ -183,9 +183,9 @@ justify-content: space-between;
 
 #countdown {
     display: flex;
-    flex-wrap: wrap; /* يسمح بتغيير ترتيب العناصر عند العرض على الشاشات الصغيرة */
-    justify-content: center; /* يحاذي العناصر أفقياً */
-    gap: 15px; /* المسافة بين كل قسم */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 15px; 
     font-family: "Rubik Glitch", serif;
     text-align: center;
     margin-top: 20px;
@@ -214,7 +214,7 @@ justify-content: space-between;
 
 .container p{
     margin: 5px;
-    color: #F25123;
+    /* color: #F25123; */
     font-weight: bold;
 }
 .wait{
@@ -505,3 +505,8 @@ footer h6 {
         font-size: 1.1rem;
     }
 }
+
+
+
+
+
