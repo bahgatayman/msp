@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="s.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .soon{
+            width: 23.4rem;
+            height: 25rem;
+        }
+        .contain{
+            margin: 70px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        h1{
+            margin-top: 30px;
+            color: white;
+            font-size: 25px;
+        }
+
+        body{
+            background-image: url('img/frontend.jpg');
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(3px);
+            /* background-repeat: no-repeat; */
+            
+        }
+
+
+        
+
+        form{
+            /* max-width: 500px; */
+            /* width: 100%; */
+            margin: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1s ease-out;
+            display: flex;
+            justify-content: center;
+        }
+
+        .containerform {
+            background: rgba(68, 68, 68, 0.596);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            color: white;
+        }
+
+        .containerform h2 {
+            text-align: center;
+            margin: 0 0 20px 0;
+            color: #fff;
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .containerform h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #2b579a;
+        }
+
+        .containerform label {
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: -15px;
+            transition: all 0.3s ease;
+        }
+
+        .containerform input {
+            padding: 12px 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: rgba(44, 44, 44, 0.8);
+            color: white;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .containerform input:focus {
+            outline: none;
+            border-color: #2b579a;
+            box-shadow: 0 0 0 3px rgba(43, 87, 154, 0.3);
+            background: rgba(44, 44, 44, 1);
+        }
+
+        .containerform input[type="file"] {
+            padding: 10px;
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px dashed #444;
+        }
+
+        .containerform input[type="file"]:hover {
+            border-color: #2b579a;
+        }
+
+        .containerform button {
+            padding: 14px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #2b579a;
+            color: white;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .containerform button:hover {
+            background: #1d3e6e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .containerform {
+                padding: 20px;
+            }
+            
+            .containerform h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            
+            <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comitee.html">Committees</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="About.html">About</a></li>
+                <!-- <li><a href="contact.html">Contact us</a></li> -->
+            </ul>
+            <a href="#" class="action_btn">Join Us</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="comitee.html">Committees</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="contact.html">Contact us</a></li> -->
+                <li><a href="#" class="action_btn">Join Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
+
+
+<form action="https://usebasin.com/f/ff19985e3a13" method="POST" enctype="multipart/form-data" id="form" >
+<div class="containerform">
+    <h2>Front end</h2>
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="input your name"/>
+    <label for="email">Email</label>
+    <input type="email" name="email" required  placeholder="input your name"/>
+    <label for="birthday">birthday</label>
+    <input type="date" name="birthday" placeholder="input your birthday"/>
+    
+
+    <label for="file-upload" aria-placeholder="upload your photo">File Upload</label>
+    <input type="file" name="file-upload" />
+    <button type="submit">Send</button>
+</div>
+  </form>
+
+
+
+
+
+<!-- ====================================================================================================== -->
+        <footer>
+        <div class="subscribe">
+            <img src="img/logo.png" alt="Footer Logo">
+            <div class="sub">
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <hr>
+        <div class="con-links">
+            <div class="footer-links">
+                <a href="About.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Projects</a>
+            </div>
+            <div class="social-icons">
+                <div><p>Join Us:</p></div>
+                <a href="https://www.facebook.com/MSPCU"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/msp-cairo/posts/?feedView=all"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/mspcu2/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@mspcu?_t=ZS-8tCSbHmnbK4&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <h6>MSPCU@2025. All rights reserved</h6>
+    </footer>
+    <script src="s.js"></script>
+</body>
+</html>
