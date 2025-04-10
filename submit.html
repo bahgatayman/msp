@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body{
-            background-image: url('img/frontend.jpg');
+            /* background-image: url('img/frontend.jpg'); */
             background-size: cover;
             background-position: center;
-            backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px); 
             /* background-repeat: no-repeat; */
             
         }
         form{
             /* max-width: 500px; */
             /* width: 100%; */
+
             margin: 20px;
             border-radius: 12px;
             overflow: hidden;
@@ -31,9 +32,15 @@
         }
 
         .containerform {
-            background: rgba(68, 68, 68, 0.596);
+            /* background-image: url('https://i.pinimg.com/736x/af/f4/5c/aff45cd7d015062915dffb4de393b7e1.jpg'); */
+
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(3px);
+            background-color: #444;
+            /* background: rgba(68, 68, 68, 0.596); */
             backdrop-filter: blur(10px);
-            padding: 40px;
+            padding: 50px;
             border-radius: 15px;
             display: flex;
             flex-direction: column;
@@ -50,21 +57,13 @@
             padding-bottom: 10px;
         }
 
-        .containerform h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: #2b579a;
-        }
+
 
         .containerform label {
             font-weight: 500;
             font-size: 0.95rem;
             margin-bottom: -15px;
+            margin-left: 4px;
             transition: all 0.3s ease;
         }
 
@@ -81,9 +80,9 @@
 
         .containerform input:focus {
             outline: none;
-            border-color: #2b579a;
+            border-color: white;
             box-shadow: 0 0 0 3px rgba(43, 87, 154, 0.3);
-            background: rgba(44, 44, 44, 1);
+            background: rgb(29, 28, 28)
         }
 
         .containerform input[type="file"] {
@@ -92,18 +91,15 @@
             border: 1px dashed #444;
         }
 
-        .containerform input[type="file"]:hover {
-            border-color: #2b579a;
-        }
 
         .containerform button {
-            padding: 14px;
+            padding: 10px;
             font-size: 1rem;
             font-weight: 600;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            background: #2b579a;
+            background: rgb(242, 81, 35);
             color: white;
             transition: all 0.3s ease;
             margin-top: 10px;
@@ -112,7 +108,7 @@
         }
 
         .containerform button:hover {
-            background: #1d3e6e;
+            background: rgb(127, 186, 0);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
@@ -120,7 +116,7 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
-        }
+        }rgb(29, 110, 72)
 
         /* Responsive adjustments */
         @media (max-width: 600px) {
@@ -166,7 +162,6 @@
 
 
 
-
 <form action="https://usebasin.com/f/ff19985e3a13" method="POST" enctype="multipart/form-data" id="form" >
 <div class="containerform">
     <h2>Front end</h2>
@@ -178,9 +173,9 @@
     <input type="date" name="birthday" placeholder="input your birthday"/>
     
 
-    <label for="file-upload" aria-placeholder="upload your photo">File Upload</label>
+    <label for="file-upload" aria-placeholder="upload your photo">Photo Upload</label>
     <input type="file" name="file-upload" />
-    <button type="submit">Send</button>
+    <button type="submit">Submit</button>
 </div>
   </form>
 
