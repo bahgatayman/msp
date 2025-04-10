@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,65 +9,148 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
-        body{
-            /* background-image: url('img/frontend.jpg'); */
-            background-size: cover;
-            background-position: center;
-            backdrop-filter: blur(3px); 
-            /* background-repeat: no-repeat; */
-            
+        /* Global Styles */
+        :root {
+            --primary-color: rgb(242, 81, 35);
+            --secondary-color: rgb(127, 186, 0);
+            --dark-bg: #444;
+            --darker-bg: #2c2c2c;
+            --text-light: #fff;
+            --transition: all 0.3s ease;
         }
-        form{
-            /* max-width: 500px; */
-            /* width: 100%; */
-
-            margin: 20px;
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--dark-bg);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        
+        .links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .action_btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .action_btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .toggle_btn {
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+        }
+        
+        /* Form Styles */
+        form {
+            max-width: 600px;
+            width: 90%;
+            margin: 2rem auto;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
             animation: fadeIn 1s ease-out;
-            display: flex;
-            justify-content: center;
         }
-
+        
         .containerform {
-            /* background-image: url('https://i.pinimg.com/736x/af/f4/5c/aff45cd7d015062915dffb4de393b7e1.jpg'); */
-
-            background-size: cover;
-            background-position: center;
-            backdrop-filter: blur(3px);
-            background-color: #444;
-            /* background: rgba(68, 68, 68, 0.596); */
-            backdrop-filter: blur(10px);
-            padding: 50px;
+            background-color: var(--dark-bg);
+            padding: 2.5rem;
             border-radius: 15px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            color: white;
+            gap: 1.5rem;
+            color: var(--text-light);
         }
-
+        
         .containerform h2 {
             text-align: center;
-            margin: 0 0 20px 0;
-            color: #fff;
+            margin-bottom: 1.5rem;
             font-size: 2rem;
             position: relative;
             padding-bottom: 10px;
         }
-
-
-
+        
+        .containerform h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
         .containerform label {
             font-weight: 500;
             font-size: 0.95rem;
-            margin-bottom: -15px;
             margin-left: 4px;
-            transition: all 0.3s ease;
         }
-
+        
         .containerform input {
             padding: 12px 15px;
             border: none;
@@ -74,58 +158,249 @@
             font-size: 1rem;
             background: rgba(44, 44, 44, 0.8);
             color: white;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             border: 1px solid transparent;
         }
-
+        
+        .containerform input::placeholder {
+            color: #aaa;
+        }
+        
         .containerform input:focus {
             outline: none;
-            border-color: white;
-            box-shadow: 0 0 0 3px rgba(43, 87, 154, 0.3);
-            background: rgb(29, 28, 28)
+            border-color: var(--text-light);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+            background: var(--darker-bg);
         }
-
+        
         .containerform input[type="file"] {
             padding: 10px;
             background: rgba(30, 30, 30, 0.8);
-            border: 1px dashed #444;
+            border: 1px dashed #666;
         }
-
-
+        
         .containerform button {
-            padding: 10px;
+            padding: 12px;
             font-size: 1rem;
             font-weight: 600;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            background: rgb(242, 81, 35);
+            background: var(--primary-color);
             color: white;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             margin-top: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
+        
         .containerform button:hover {
-            background: rgb(127, 186, 0);
+            background: var(--secondary-color);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            padding: 2rem;
+            margin-top: auto;
+        }
+        
+        .subscribe {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+        }
+        
+        .subscribe img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .sub {
+            display: flex;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .sub input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+        }
+        
+        .sub button {
+            padding: 10px 15px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .sub button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        hr {
+            border: none;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1.5rem auto;
+            max-width: 1200px;
+        }
+        
+        .con-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .social-icons p {
+            margin-right: 0.5rem;
+        }
+        
+        .social-icons a {
+            color: var(--text-light);
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        h6 {
+            text-align: center;
+            font-weight: 300;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
-        }rgb(29, 110, 72)
-
+        }
+        
         /* Responsive adjustments */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            .navbar .links,
+            .navbar .action_btn {
+                display: none;
+            }
+            
+            .toggle_btn {
+                display: block;
+            }
+            
+            .dropdown {
+                display: none;
+                position: absolute;
+                right: 2rem;
+                top: 60px;
+                width: 300px;
+                background: var(--dark-bg);
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                z-index: 99;
+            }
+            
+            .dropdown li {
+                padding: 0.7rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .dropdown li a {
+                color: white;
+            }
+            
+            .dropdown li .action_btn {
+                display: block;
+                text-align: center;
+            }
+            
+            .dropdown.active {
+                display: block;
+            }
+            
             .containerform {
-                padding: 20px;
+                padding: 1.5rem;
+            }
+            
+            .con-links {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .containerform {
+                padding: 1.2rem;
             }
             
             .containerform h2 {
                 font-size: 1.5rem;
+            }
+            
+            .sub {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .sub input,
+            .sub button {
+                border-radius: 5px;
+                width: 100%;
             }
         }
     </style>
@@ -133,14 +408,12 @@
 <body>
     <header>
         <div class="navbar">
-            
             <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a></div>
             <ul class="links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="comitee.html">Committees</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="About.html">About</a></li>
-                <!-- <li><a href="contact.html">Contact us</a></li> -->
             </ul>
             <a href="form.html" class="action_btn">Join Us</a>
             <div class="toggle_btn">
@@ -153,38 +426,35 @@
                 <li><a href="comitee.html">Committees</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="about.html">About</a></li>
-                <!-- <li><a href="contact.html">Contact us</a></li> -->
                 <li><a href="#" class="action_btn">Join Us</a></li>
             </ul>
         </div>
     </header>
 
+    <form action="https://usebasin.com/f/ff19985e3a13" method="POST" enctype="multipart/form-data" id="form">
+        <div class="containerform">
+            <h2>Front end</h2>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="birthday">Birthday</label>
+                <input type="date" name="birthday" id="birthday" placeholder="Select your birthday">
+            </div>
+            <div class="form-group">
+                <label for="file-upload">Photo Upload</label>
+                <input type="file" name="file-upload" id="file-upload">
+            </div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
 
-
-
-<form action="https://usebasin.com/f/ff19985e3a13" method="POST" enctype="multipart/form-data" id="form" >
-<div class="containerform">
-    <h2>Front end</h2>
-    <label for="name">Name</label>
-    <input type="text" name="name" placeholder="input your name"/>
-    <label for="email">Email</label>
-    <input type="email" name="email" required  placeholder="input your name"/>
-    <label for="birthday">birthday</label>
-    <input type="date" name="birthday" placeholder="input your birthday"/>
-    
-
-    <label for="file-upload" aria-placeholder="upload your photo">Photo Upload</label>
-    <input type="file" name="file-upload" />
-    <button type="submit">Submit</button>
-</div>
-  </form>
-
-
-
-
-
-<!-- ====================================================================================================== -->
-        <footer>
+    <footer>
         <div class="subscribe">
             <img src="img/logo.png" alt="Footer Logo">
             <div class="sub">
@@ -211,6 +481,22 @@
         <br>
         <h6>MSPCU@2025. All rights reserved</h6>
     </footer>
-    <script src="s.js"></script>
+
+    <script>
+        // Toggle dropdown menu
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const dropdown = document.querySelector('.dropdown');
+        
+        toggleBtn.addEventListener('click', () => {
+            dropdown.classList.toggle('active');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar') && !e.target.closest('.dropdown')) {
+                dropdown.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
