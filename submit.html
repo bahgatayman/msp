@@ -28,16 +28,33 @@
   
   
   
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+  }
+  
   #form {
     width: 100%;
     max-width: 500px;
-    margin: 20px;
     animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   }
   
   .form-container {
-    background: rgba(20, 20, 20, 0.9);
-    padding: 40px;
+    background: rgba(20, 20, 20, 0.95);
+    padding: 30px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
@@ -53,20 +70,20 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(100, 65, 165, 0.2) 0%, transparent 70%);
     animation: rotate 15s linear infinite;
     z-index: -1;
   }
   
   .form-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     position: relative;
   }
   
   .form-title {
     color: #fff;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     margin-bottom: 8px;
     position: relative;
@@ -81,7 +98,7 @@
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
-    background: linear-gradient(90deg, #ff4d4d, #f9cb28);
+    background: linear-gradient(90deg, #6441a5, #2a0845);
     border-radius: 3px;
   }
   
@@ -93,7 +110,7 @@
   
   .input-group {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
   
   .input-group input {
@@ -125,7 +142,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #ff4d4d, #f9cb28);
+    background: linear-gradient(90deg, #6441a5, #2a0845);
     transition: all 0.4s ease;
   }
   
@@ -133,7 +150,7 @@
   .input-group input:valid ~ label {
     top: -20px;
     font-size: 12px;
-    color: #f9cb28;
+    color: #8e6cbb;
   }
   
   .input-group input:focus ~ .underline,
@@ -142,31 +159,34 @@
   }
   
   .file-upload-group {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
   
   .file-upload-label {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
   }
   
   .file-upload-button {
-    padding: 10px 15px;
-    background: linear-gradient(90deg, #ff4d4d, #f9cb28);
-    color: #000;
-    border-radius: 6px;
+    padding: 12px 15px;
+    background: linear-gradient(90deg, #6441a5, #2a0845);
+    color: white;
+    border-radius: 8px;
     font-size: 14px;
     font-weight: 500;
-    margin-right: 15px;
+    text-align: center;
     transition: all 0.3s ease;
+    width: 100%;
   }
   
   .file-upload-text {
     color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
     transition: all 0.3s ease;
+    text-align: center;
   }
   
   .file-upload-input {
@@ -175,14 +195,14 @@
   
   .file-upload-label:hover .file-upload-button {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(249, 203, 40, 0.3);
+    box-shadow: 0 5px 15px rgba(100, 65, 165, 0.4);
   }
   
   .submit-btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(90deg, #ff4d4d, #f9cb28);
-    color: #000;
+    background: linear-gradient(90deg, #6441a5, #2a0845);
+    color: white;
     border: none;
     border-radius: 8px;
     font-size: 16px;
@@ -200,14 +220,14 @@
   .submit-btn svg {
     width: 20px;
     height: 20px;
-    stroke: #000;
+    stroke: white;
     stroke-width: 2;
     transition: all 0.3s ease;
   }
   
   .submit-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(249, 203, 40, 0.3);
+    box-shadow: 0 10px 20px rgba(100, 65, 165, 0.4);
   }
   
   .submit-btn:hover svg {
@@ -247,14 +267,71 @@
     }
   }
   
-  /* Responsive adjustments */
-  @media (max-width: 600px) {
+  /* Enhanced Mobile Responsiveness */
+  @media (max-width: 480px) {
+    body {
+      padding: 15px;
+      align-items: flex-start;
+    }
+    
     .form-container {
-      padding: 30px 20px;
+      padding: 25px 20px;
+      border-radius: 12px;
     }
     
     .form-title {
-      font-size: 24px;
+      font-size: 22px;
+    }
+    
+    .form-subtitle {
+      font-size: 13px;
+    }
+    
+    .input-group {
+      margin-bottom: 20px;
+    }
+    
+    .input-group input {
+      padding: 10px 0;
+      font-size: 15px;
+    }
+    
+    .input-group label {
+      font-size: 15px;
+    }
+    
+    .input-group input:focus ~ label,
+    .input-group input:valid ~ label {
+      top: -18px;
+      font-size: 11px;
+    }
+    
+    .file-upload-button {
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+    
+    .submit-btn {
+      padding: 12px;
+      font-size: 15px;
+    }
+    
+    .form-footer p {
+      font-size: 11px;
+    }
+  }
+  
+  @media (max-width: 350px) {
+    .form-container {
+      padding: 20px 15px;
+    }
+    
+    .form-title {
+      font-size: 20px;
+    }
+    
+    .input-group input {
+      font-size: 14px;
     }
   }
 
