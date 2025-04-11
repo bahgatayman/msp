@@ -39,12 +39,17 @@
   
   #form {
     width: 100%;
-    max-width: 500px;
     animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    display: flex;
+    justify-content: center;
+    /* background-color: #2a0845; */
+    /* max-width: 500px; */
   }
   
   .form-container {
+    /* margin: 10px; */
     background: rgba(20, 20, 20, 0.95);
+    width: 500px;
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -52,19 +57,11 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     overflow: hidden;
     position: relative;
+    /* background: linear-gradient(90deg, #6441a5, #2a0845); */
+
   }
   
-  .form-container::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(100, 65, 165, 0.2) 0%, transparent 70%);
-    animation: rotate 15s linear infinite;
-    z-index: -1;
-  }
+
   
   .form-header {
     text-align: center;
@@ -81,7 +78,7 @@
     display: inline-block;
   }
   
-  .form-title::after {
+  /* .form-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -91,7 +88,7 @@
     height: 3px;
     background: linear-gradient(90deg, #6441a5, #2a0845);
     border-radius: 3px;
-  }
+  } */
   
   .form-subtitle {
     color: rgba(255, 255, 255, 0.7);
@@ -133,7 +130,9 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #6441a5, #2a0845);
+    /* background: linear-gradient(90deg, #6441a5, #2a0845); */
+    background: linear-gradient(90deg ,#7FBA00,#01A3F1);
+    
     transition: all 0.4s ease;
   }
   
@@ -163,7 +162,8 @@
   
   .file-upload-button {
     padding: 12px 15px;
-    background: linear-gradient(90deg, #6441a5, #2a0845);
+    /* background: linear-gradient(90deg, #41a557, #5c0c0c); */
+    border: 1px solid white;
     color: white;
     border-radius: 8px;
     font-size: 14px;
@@ -192,7 +192,10 @@
   .submit-btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(90deg, #6441a5, #2a0845);
+    /* background: linear-gradient(90deg, #6441a5, #2a0845); */
+    /* background-color: rgb(127, 186, 0); */
+    background: linear-gradient(90deg ,#7FBA00,#01A3F1);
+
     color: white;
     border: none;
     border-radius: 8px;
@@ -208,13 +211,6 @@
     position: relative;
   }
   
-  .submit-btn svg {
-    width: 20px;
-    height: 20px;
-    stroke: white;
-    stroke-width: 2;
-    transition: all 0.3s ease;
-  }
   
   .submit-btn:hover {
     transform: translateY(-3px);
@@ -363,8 +359,8 @@
 <form action="https://usebasin.com/f/ff19985e3a13" method="POST" enctype="multipart/form-data" id="form">
   <div class="form-container">
     <div class="form-header">
-      <h2 class="form-title">Front End Developer</h2>
-      <div class="form-subtitle">Join our team today</div>
+      <h2 class="form-title">Front End Committee</h2>
+      <div class="form-subtitle">Data delegates</div>
     </div>
     
     <div class="input-group">
@@ -378,6 +374,12 @@
       <label for="email">Email Address</label>
       <div class="underline"></div>
     </div>
+
+    <div class="input-group">
+      <input type="tel" name="phone" id="phone" required />
+      <label for="email">Mobile phone</label>
+      <div class="underline"></div>
+    </div>
     
     <div class="input-group">
       <input type="date" name="birthday" id="birthday" required />
@@ -388,21 +390,17 @@
     <div class="file-upload-group">
       <label class="file-upload-label">
         <span class="file-upload-button">Choose Photo</span>
-        <span class="file-upload-text">No file selected</span>
+        <span class="file-upload-text">Personal photo</span>
         <input type="file" name="file-upload" class="file-upload-input" />
       </label>
     </div>
     
     <button type="submit" class="submit-btn">
       <span>Submit Application</span>
-      <svg viewBox="0 0 13 10" height="10px" width="15px">
-        <path d="M1,5 L11,5"></path>
-        <polyline points="8 1 12 5 8 9"></polyline>
-      </svg>
+
     </button>
-    
     <div class="form-footer">
-      <p>We'll contact you within 48 hours</p>
+      <p>Powerd by MSP</p>
     </div>
   </div>
 </form>
