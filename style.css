@@ -364,6 +364,9 @@ body {
     .impact-card h3 {
         font-size: 2rem;
     }
+    .menu-btn {
+        display: block;
+    }
 }
 
 
@@ -609,6 +612,9 @@ body {
     .footer-social {
         margin-top: 20px;
     }
+        .footer-social .icons {
+            justify-content: center;
+        }
 }
 
 @media (max-width:720px) {
@@ -620,6 +626,17 @@ body {
         justify-content: center;
         padding-top: 60px;
         /* Add space below header */
+    }
+    .feature-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        align-items: center;
+    }
+    .feature.card {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
     }
     .hero-grid {
         display: block;
